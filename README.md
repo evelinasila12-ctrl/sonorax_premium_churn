@@ -5,7 +5,7 @@
 **Tools:** PostgreSQL · SQL ·  Google Sheets · Looker Studio  (DODAC BRAKUJACE)   
 **Dataset:** The project uses a synthetic dataset of 15,000 users  | (DODAĆ BRAKUJACE) | 10 European markets   generated with the assistance of AI. All data is fictional and created exclusively for analytical and portfolio purposes.
 
-📊 **[View Interactive Dashboard](https://datastudio.google.com/reporting/b7bdd54a-6ee8-45be-aef0-8f65f45b12c4)**
+📊 **[View Dashboard](https://datastudio.google.com/reporting/b7bdd54a-6ee8-45be-aef0-8f65f45b12c4)**
 
 ---
 # Project Overview
