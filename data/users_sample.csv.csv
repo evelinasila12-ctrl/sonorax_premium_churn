@@ -1,0 +1,101 @@
+user_id,country,age,device,acquisition_source,signup_date,initial_plan,plan,plan_change_date,promo_used,subscription_status,churn_date,payment_method,monthly_price,failed_payments_count,last_payment_status,last_failed_payment_date,estimated_lost_revenue
+U000001,Germany,41,Web,social_media,2025-09-04,Premium,Premium,,False,active,,PayPal,9.99,0,success,,0.0
+U000002,Other,27,iOS,social_media,2024-01-07,Premium,Premium,,False,churned,2025-04-28,Card,9.99,0,success,,0.0
+U000003,France,21,Desktop,organic,2025-01-23,Premium,Premium,,False,churned,2026-08-08,PayPal,9.99,1,failed,2026-07-15,7.67
+U000004,Brazil,28,Web,organic,2024-05-04,Free,Free,,True,active,,,0.0,0,,,0.0
+U000005,Poland,23,Android,social_media,2024-07-27,Free,Free,,False,active,,,0.0,0,,,0.0
+U000006,Poland,23,Android,paid_ads,2025-12-15,Free,Premium,2026-01-09,False,churned,2026-05-07,Card,9.99,0,success,,0.0
+U000007,Poland,31,Android,organic,2025-11-07,Free,Free,,False,active,,,0.0,0,,,0.0
+U000008,Sweden,16,iOS,organic,2026-04-07,Free,Free,,True,churned,2026-07-05,,0.0,0,,,0.0
+U000009,Brazil,16,iOS,social_media,2024-10-18,Premium,Premium,,False,active,,Card,9.99,0,success,,0.0
+U000010,France,28,Android,social_media,2025-05-27,Premium,Premium,,False,active,,Apple Pay,9.99,0,success,,0.0
+U000011,Poland,27,Android,referral,2025-05-20,Free,Premium,2025-06-06,True,churned,2025-12-30,Card,9.99,1,success,2025-11-23,9.86
+U000012,Other,30,Android,paid_ads,2025-10-02,Free,Free,,False,churned,2026-08-12,,0.0,0,,,0.0
+U000013,Sweden,43,Web,organic,2025-12-18,Free,Premium,2025-12-27,True,churned,2026-07-01,PayPal,9.99,0,success,,0.0
+U000014,USA,28,Desktop,social_media,2025-05-15,Premium,Premium,,True,churned,2026-01-17,Card,9.99,0,success,,0.0
+U000015,USA,32,Android,organic,2025-03-19,Free,Premium,2025-06-03,True,active,,Google Pay,9.99,0,success,,0.0
+U000016,USA,20,Android,organic,2025-04-20,Free,Premium,2026-03-13,False,active,,Card,9.99,0,success,,0.0
+U000017,USA,34,Android,organic,2026-03-19,Free,Free,,True,active,,,0.0,0,,,0.0
+U000018,UK,23,Web,organic,2025-03-24,Premium,Premium,,False,churned,2025-12-23,Apple Pay,9.99,0,success,,0.0
+U000019,Germany,28,Desktop,social_media,2024-02-10,Free,Free,,False,churned,2026-02-25,,0.0,0,,,0.0
+U000020,USA,27,Android,paid_ads,2025-01-13,Free,Free,,False,churned,2026-07-15,,0.0,0,,,0.0
+U000021,Brazil,36,Android,organic,2026-05-24,Free,Premium,2026-06-02,False,active,,Card,9.99,0,success,,0.0
+U000022,Poland,17,Android,paid_ads,2026-05-07,Free,Free,,False,active,,,0.0,0,,,0.0
+U000023,USA,16,iOS,paid_ads,2024-04-02,Free,Free,,False,active,,,0.0,0,,,0.0
+U000024,Germany,26,iOS,referral,2024-04-13,Premium,Premium,,False,churned,2025-12-29,Google Pay,9.99,2,failed,2025-12-22,17.32
+U000025,Germany,31,iOS,referral,2024-12-30,Premium,Premium,,False,churned,2025-12-16,Card,9.99,1,success,2025-12-12,6.13
+U000026,Spain,29,Desktop,organic,2024-08-28,Free,Premium,2025-03-03,False,active,,Card,9.99,0,success,,0.0
+U000027,USA,37,Android,referral,2024-09-16,Free,Premium,2024-10-27,False,active,,Card,9.99,0,success,,0.0
+U000028,UK,31,iOS,organic,2024-06-18,Free,Free,,False,active,,,0.0,0,,,0.0
+U000029,Brazil,23,Android,organic,2024-09-14,Free,Premium,2025-03-06,False,active,,Card,9.99,0,success,,0.0
+U000030,Poland,16,Android,organic,2024-09-06,Premium,Premium,,True,churned,2026-01-02,PayPal,9.99,3,success,2025-11-27,25.72
+U000031,Brazil,26,iOS,organic,2026-03-25,Premium,Premium,,False,churned,2026-07-03,PayPal,9.99,1,success,2026-05-26,8.94
+U000032,Poland,36,Desktop,social_media,2024-01-30,Free,Free,,False,active,,,0.0,0,,,0.0
+U000033,Poland,24,iOS,social_media,2024-03-22,Free,Premium,2024-04-02,True,churned,2025-05-08,Google Pay,9.99,0,success,,0.0
+U000034,Other,28,iOS,social_media,2024-10-12,Free,Free,,False,churned,2026-04-09,,0.0,0,,,0.0
+U000035,Other,31,iOS,referral,2026-05-27,Premium,Premium,,False,active,,Card,9.99,0,success,,0.0
+U000036,Spain,19,Android,organic,2024-12-20,Premium,Premium,,False,churned,2026-06-23,Card,9.99,0,success,,0.0
+U000037,USA,32,iOS,organic,2024-09-13,Free,Free,,False,churned,2026-01-12,,0.0,0,,,0.0
+U000038,Poland,41,iOS,paid_ads,2024-11-09,Free,Free,,False,active,,,0.0,0,,,0.0
+U000039,France,26,iOS,referral,2026-04-14,Free,Premium,2026-05-14,False,churned,2026-06-17,Google Pay,9.99,1,success,2026-06-05,6.63
+U000040,Germany,18,iOS,partnership,2025-06-18,Free,Free,,True,churned,2026-01-05,,0.0,0,,,0.0
+U000041,Poland,27,iOS,organic,2024-08-19,Free,Free,,False,active,,,0.0,0,,,0.0
+U000042,UK,16,Web,social_media,2025-02-09,Free,Free,,False,active,,,0.0,0,,,0.0
+U000043,Poland,30,Android,social_media,2024-10-31,Free,Premium,2024-11-04,False,active,,Card,9.99,0,success,,0.0
+U000044,Netherlands,31,Web,organic,2025-01-09,Free,Premium,2025-01-27,False,active,,Apple Pay,9.99,0,success,,0.0
+U000045,USA,41,Web,paid_ads,2024-09-09,Free,Premium,2025-02-20,False,active,,Direct Debit,9.99,0,success,,0.0
+U000046,Brazil,26,Android,organic,2025-07-28,Premium,Premium,,True,active,,PayPal,9.99,1,success,2026-08-06,8.34
+U000047,USA,31,iOS,paid_ads,2026-03-26,Free,Free,,False,active,,,0.0,0,,,0.0
+U000048,UK,21,Android,referral,2024-02-13,Premium,Premium,,True,churned,2025-02-26,Google Pay,9.99,0,success,,0.0
+U000049,UK,25,Android,social_media,2025-07-16,Free,Free,,True,churned,2026-08-11,,0.0,0,,,0.0
+U000050,USA,16,iOS,paid_ads,2024-07-08,Free,Premium,2024-08-16,False,active,,Card,9.99,0,success,,0.0
+U000051,Other,26,Web,social_media,2026-01-21,Premium,Premium,,False,churned,2026-07-12,Google Pay,9.99,0,success,,0.0
+U000052,Spain,25,Android,organic,2025-12-19,Free,Free,,False,active,,,0.0,0,,,0.0
+U000053,Other,30,Web,organic,2025-07-06,Free,Free,,False,active,,,0.0,0,,,0.0
+U000054,Netherlands,23,iOS,organic,2025-04-08,Free,Free,,False,active,,,0.0,0,,,0.0
+U000055,Brazil,28,Web,social_media,2025-10-28,Free,Premium,2025-12-01,False,active,,Card,9.99,0,success,,0.0
+U000056,Netherlands,25,Web,referral,2025-04-24,Free,Free,,False,churned,2026-07-03,,0.0,0,,,0.0
+U000057,Poland,25,Web,paid_ads,2025-09-01,Free,Premium,2025-09-15,False,active,,PayPal,9.99,0,success,,0.0
+U000058,USA,28,iOS,partnership,2024-02-26,Premium,Premium,,False,churned,2025-07-27,PayPal,9.99,0,success,,0.0
+U000059,Poland,28,Web,social_media,2024-06-18,Free,Free,,False,active,,,0.0,0,,,0.0
+U000060,USA,34,Android,paid_ads,2026-02-18,Premium,Premium,,False,churned,2026-08-17,Card,9.99,0,success,,0.0
+U000061,Germany,27,Android,paid_ads,2025-04-10,Premium,Premium,,False,churned,2026-03-28,Google Pay,9.99,0,success,,0.0
+U000062,USA,25,Android,social_media,2026-04-29,Premium,Premium,,False,active,,Card,9.99,0,success,,0.0
+U000063,Sweden,26,iOS,organic,2025-07-25,Free,Free,,False,active,,,0.0,0,,,0.0
+U000064,Germany,22,Android,organic,2025-07-29,Free,Free,,True,churned,2026-07-07,,0.0,0,,,0.0
+U000065,USA,25,Android,organic,2026-02-10,Premium,Premium,,True,active,,Google Pay,9.99,0,success,,0.0
+U000066,UK,44,Web,referral,2025-04-26,Free,Free,,False,churned,2026-02-23,,0.0,0,,,0.0
+U000067,Poland,20,iOS,referral,2025-02-26,Free,Free,,False,active,,,0.0,0,,,0.0
+U000068,Spain,25,Web,organic,2025-02-06,Free,Free,,False,active,,,0.0,0,,,0.0
+U000069,Poland,24,Android,referral,2026-05-24,Free,Premium,2026-06-05,True,churned,2026-07-18,PayPal,9.99,0,success,,0.0
+U000070,Other,26,Android,paid_ads,2025-12-02,Free,Premium,2026-02-09,True,active,,Direct Debit,9.99,0,success,,0.0
+U000071,Spain,25,Android,paid_ads,2024-03-01,Premium,Premium,,True,churned,2025-10-22,Card,9.99,0,success,,0.0
+U000072,USA,30,Android,social_media,2024-08-31,Free,Free,,True,active,,,0.0,0,,,0.0
+U000073,Poland,16,Android,paid_ads,2025-02-18,Premium,Premium,,True,churned,2025-12-06,PayPal,9.99,2,failed,2025-10-08,17.23
+U000074,Spain,36,Android,paid_ads,2024-06-25,Free,Premium,2024-07-07,True,churned,2025-06-03,PayPal,9.99,0,success,,0.0
+U000075,France,33,Android,organic,2025-11-01,Free,Free,,False,churned,2026-02-20,,0.0,0,,,0.0
+U000076,France,18,iOS,organic,2025-07-07,Premium,Premium,,False,churned,2026-08-01,Card,9.99,0,success,,0.0
+U000077,Spain,16,Android,paid_ads,2024-01-20,Free,Free,,False,active,,,0.0,0,,,0.0
+U000078,Poland,20,Android,organic,2024-04-21,Free,Free,,True,active,,,0.0,0,,,0.0
+U000079,Germany,26,iOS,social_media,2025-12-24,Free,Premium,2026-01-09,True,churned,2026-03-28,Card,9.99,0,success,,0.0
+U000080,Poland,48,iOS,paid_ads,2025-08-30,Premium,Premium,,False,active,,Apple Pay,9.99,0,success,,0.0
+U000081,Sweden,32,Web,paid_ads,2025-06-15,Free,Free,,False,active,,,0.0,0,,,0.0
+U000082,Brazil,16,iOS,social_media,2024-01-16,Free,Free,,True,active,,,0.0,0,,,0.0
+U000083,USA,22,Desktop,partnership,2025-05-21,Free,Free,,True,churned,2026-06-20,,0.0,0,,,0.0
+U000084,Poland,27,Web,organic,2024-02-26,Premium,Premium,,False,churned,2026-07-05,Card,9.99,0,success,,0.0
+U000085,USA,30,iOS,paid_ads,2024-10-01,Free,Free,,False,active,,,0.0,0,,,0.0
+U000086,USA,17,Android,social_media,2026-01-04,Free,Free,,False,churned,2026-08-07,,0.0,0,,,0.0
+U000087,France,26,Android,organic,2024-01-13,Free,Free,,False,churned,2025-08-22,,0.0,0,,,0.0
+U000088,Brazil,22,iOS,organic,2026-01-28,Premium,Premium,,True,active,,Direct Debit,9.99,1,success,2026-08-30,6.65
+U000089,Netherlands,19,iOS,paid_ads,2025-06-15,Free,Free,,True,active,,,0.0,0,,,0.0
+U000090,UK,30,Desktop,paid_ads,2024-12-28,Free,Premium,2025-02-27,True,active,,Google Pay,9.99,0,success,,0.0
+U000091,Poland,34,iOS,organic,2024-11-27,Free,Premium,2025-02-25,False,churned,2025-11-26,Card,9.99,0,success,,0.0
+U000092,France,34,Desktop,paid_ads,2025-03-08,Free,Free,,False,churned,2026-05-22,,0.0,0,,,0.0
+U000093,Spain,32,Web,paid_ads,2024-08-26,Free,Free,,False,active,,,0.0,0,,,0.0
+U000094,UK,24,Desktop,paid_ads,2025-02-13,Premium,Premium,,False,active,,Google Pay,9.99,0,success,,0.0
+U000095,Spain,33,Android,social_media,2025-06-30,Premium,Premium,,False,active,,Card,9.99,0,success,,0.0
+U000096,UK,30,Android,social_media,2024-06-17,Free,Premium,2024-06-27,True,churned,2026-02-11,Google Pay,9.99,0,success,,0.0
+U000097,UK,29,iOS,paid_ads,2025-01-28,Free,Premium,2025-08-02,True,churned,2025-09-18,PayPal,9.99,0,success,,0.0
+U000098,Germany,23,iOS,paid_ads,2024-11-27,Free,Premium,2024-12-06,False,churned,2025-07-14,Card,9.99,0,success,,0.0
+U000099,Poland,24,Android,social_media,2024-10-06,Free,Free,,False,active,,,0.0,0,,,0.0
+U000100,Poland,28,iOS,paid_ads,2024-07-19,Premium,Premium,,False,churned,2026-08-03,Card,9.99,1,failed,2026-06-14,9.46
