@@ -3,7 +3,7 @@
 **Author:** Ewelina Silina  
 **Project Type:** SQL Data Analytics  
 **Tools:** PostgreSQL (SQL) · pgAdmin 4 ·  Google Sheets (pivot tables, XLOOKUP) · Looker Studio · GitHub  
-**Dataset:** The project uses a synthetic dataset of 15,000 users  | (DODAĆ BRAKUJACE) | 10 European markets   generated with the assistance of AI. All data is fictional and created exclusively for analytical and portfolio purposes.
+**Dataset:** Synthetic dataset generated with the assistance of AI: 15,000 users, about 215,000 monthly listening records and 6,000 A/B test assignments (January 2024 – September 2026), covering 10 country categories (7 European countries, USA, Brazil and "Other"). All data is fictional and created exclusively for analytical and portfolio purposes.
 
 📊 **[View Dashboard](https://datastudio.google.com/reporting/b7bdd54a-6ee8-45be-aef0-8f65f45b12c4)**  
 📊 **[View Google Sheets Analysis](https://docs.google.com/spreadsheets/d/1i2JDQBkH-AwZcbQ26CAiCuM2XQDCLog0N-pFuiwgNQQ/edit?usp=sharing)**
