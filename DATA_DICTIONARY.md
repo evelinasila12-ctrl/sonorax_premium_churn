@@ -61,7 +61,7 @@ One row per user per month, from the signup month to the churn month (churned us
 
 ### 3.3 ab_test_assignments
 
-Two A/B tests, each with 3,000 different users (6,000 rows). Eligible users were active and had signed up at least 90 days before the first assignment date. Variants were assigned randomly. Only the push_notifications test is analyzed in this project.
+The A/B test includes 6,000 users, with 3,000 assigned to group A and 3,000 to group B. Eligible users were active and had signed up at least 90 days before the first assignment date. Variants were assigned randomly. Only the push_notifications test is analyzed in this project.
 
 | Column | Type | Description |
 |---|---|---|
