@@ -89,21 +89,25 @@ Without evidence, retention budget is spent on assumptions. This project shows w
 
 **Data Source**
 
-The project uses a synthetic dataset generated programmatically (Python/NumPy) with AI assistance (Claude), with realistic relationships built in on purpose. It simulates user behavior, subscriptions, payments, and engagement in a fictional music streaming service, Sonorax.   
+The project uses a synthetic dataset generated programmatically (Python/NumPy) with AI assistance (Claude), with realistic relationships built in on purpose. It simulates user behavior, subscriptions, payments, and engagement in a fictional music streaming service, Sonorax. Signups cover January 2024 – May 2026, and listening activity runs until September 2026.   
 The data does not represent real customers or business transactions. All findings demonstrate the analytical workflow using simulated data.
 
 **Dataset Structure**
 
 |Table | Rows | Content |
 |------|------|---------|
-|`users`|	15,000 | country, age, device, acquisition source, plan, signup / conversion / churn dates, promo flag, payment method and failed payments
-|`listening_activity`|	215,324 | listening minutes, sessions, songs played, playlists created, skips
-|`ab_test_assignments`|	6,000	| Two A/B tests with variant and 4-week pre/post metrics. This project analyzes the push notifications test (3,000 users)
-| country_region | 10 | Google Sheets lookup table: maps each country to a region (Europe, North America, South America, Other). Used with XLOOKUP. |
+| `users` | 15,000 | One row per user: country, age, device, acquisition source, plan, signup / conversion / churn dates, promo flag, payment method and failed payments |
+| `listening_activity` | 215,324 | One row per user per month: listening minutes, sessions, songs played, playlists created, skips |
+| `ab_test_assignments` | 6,000 | One row per user per test: two A/B tests with variant and 4-week pre/post metrics. This project analyzes the push notifications test (3,000 users) |
+| `country_region` | 10 | Google Sheets lookup table: maps each country to a region (Europe, North America, South America, Other), used with `XLOOKUP` |
 
+Full column descriptions: [DATA_DICTIONARY.md](DATA_DICTIONARY.md)
 
-Simplifications: payments and the conversion date are columns in `users` (no transaction table), there is a single Premium price ($9.99) and currency (USD), and each user converts at most once.
+**Simplifications**
 
+- Payments and the conversion date are columns in `users` (no transaction table).
+- There is a single Premium price ($9.99) and currency (USD).
+- Each user converts at most once.
 ---
 
 # Tools & Technologies
