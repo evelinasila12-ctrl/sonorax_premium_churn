@@ -23,12 +23,14 @@ Each analytical topic follows a structured approach:
 **Business Problem → Data → Analysis → Insight → Business Recommendation**
 
 ---
-# Key Findings (BRAKUJE JEDNEGO)
+# Key Findings 
 
 - **Premium Churn:** 44.9% of Premium users have churned, representing approximately $39K in lost monthly recurring revenue (MRR).
 
-- **Payment Failures:** Users with failed payments have a higher churn rate (54.0%) compared to users without payment failures (41.5%). Direct Debit and PayPal show the highest payment failure rates.
+- **Payment Failures:** Users with failed payments have a higher churn rate (54.0%) compared to users without payment failures (41.5%). Direct Debit (48.1%) and PayPal (43.2%) fail most often, vs 19.0% for Card and 15.4% for Apple Pay.
 
+- **Conversion:** 41% of Free users upgraded to Premium (4,417 of 10,716), on average after 56.5 days. iOS users converted most often (44.2%).
+  
 - **Listening Activity:** Listening time alone does not meaningfully distinguish users who churn from those who remain subscribed.
 
 - **Push Notification Experiment:** The A/B test showed that push notifications increased the 7-day return rate from 50.8% to 72.8%, indicating a positive impact on short-term user engagement.
@@ -36,59 +38,47 @@ Each analytical topic follows a structured approach:
 ---
 
 # Business Problem
-Premium is the only paid subscription tier represented in the dataset, making customer retention directly linked to recurring revenue. Sonorax faces a significant challenge: a considerable share of Premium subscribers are cancelling their subscriptions, but the underlying reasons remain unclear.
+Premium is the only paid plan in the dataset, so customer retention is directly tied to recurring revenue. Almost half of Premium subscribers (44.9%) have cancelled, and the reasons are unclear.
 
-The business needs to understand what drives subscription churn. Are users becoming less engaged before cancelling? Do failed payments contribute to subscription loss? Are users converting from Free to Premium likely to remain subscribed? And which engagement strategies, such as push notifications and promotional campaigns, actually improve user retention?
+The business needs to understand what is associated with cancellations. Do users listen less before they leave? Do failed payments contribute to subscription loss? Which Free users convert to Premium, how fast, and what influences it? Are push notifications and promotions associated with better engagement and retention?
 
-Without these insights, retention efforts risk being based on assumptions rather than evidence, leading to inefficient resource allocation and missed revenue opportunities.
-
-This project aims to identify where and why users are being lost, evaluate the factors associated with churn, and provide actionable, data-driven recommendations to help Sonorax improve customer retention and protect recurring revenue.
+Without evidence, retention budget is spent on assumptions. This project shows where users are lost and which factors are associated with churn, and turns the findings into data-driven recommendations to protect recurring revenue.
 
 ---
 # Project Objectives
 
-**The analysis answers these questions:**(dodac jeszce punkty)
+**The analysis answers these questions:**
 
 **1. Churn:** 
 
-- What percentage of Premium users cancel their subscriptions?
-
-- How long do users typically remain subscribed before churning?
-
+- What percentage of Premium users cancel their subscriptions?   
+- How long after signing up do Premium users typically cancel?    
 - What is the estimated financial impact of Premium cancellations?
 
 **2. Payments:** 
 
-- Which payment methods have the highest failure rates?
-
-- Is there an association between failed payments and subscription cancellations?
-
+- Which payment methods have the highest failure rates?   
+- Is there an association between failed payments and subscription cancellations?   
 - What is the estimated revenue impact of payment failures?
 
 **3. Conversion:** 
 
-- What percentage of Free users convert to Premium?
-
-- How long does it take users to upgrade to Premium?
-
+- What percentage of Free users convert to Premium?   
+- How long does it take users to upgrade to Premium?   
 - How do device type, acquisition channel, and promotional campaigns relate to conversion rates?
   
 **4. Engagement:**
 
--Does listening activity decline before users cancel their subscriptions?
-
--Are users who churn less likely to create playlists or engage with the platform?
+- Do users who churn listen less or create fewer playlists than users who stay?   
+- How does average listening change over time?  
 
 **5. A/B Testing:** 
 
--Do push notifications increase the percentage of users who return to the app within 7 days?
-
--Is there a measurable difference in return rates between the control and test groups?
+- Do push notifications increase the percentage of users who return to the app within 7 days?   
 
 **6. Promotions:**
 
-- Are users who receive promotional offers less likely to churn?
-
+- Are who used a promotion less likely to churn?    
 - Does the relationship between promotional campaigns and churn vary across regions?
 
 ---
@@ -97,22 +87,18 @@ This project aims to identify where and why users are being lost, evaluate the f
 
 **Data Source**
 
-The project uses a synthetic dataset generated with AI assistance for portfolio purposes. It simulates user behavior, subscriptions, payments, and engagement in a fictional music streaming service, Sonorax.
-
+The project uses a synthetic dataset generated programmatically (Python/NumPy) with AI assistance (Claude), with realistic relationships built in on purpose. It simulates user behavior, subscriptions, payments, and engagement in a fictional music streaming service, Sonorax.   
 The data does not represent real customers or business transactions. All findings demonstrate the analytical workflow using simulated data.
 
 **Dataset Structure**
 
-The data is synthetic: it was generated programmatically (Python/NumPy) with AI assistance (Claude), with realistic relationships built in on purpose. The findings therefore demonstrate the analytical workflow, not the behavior of real customers.
-
 |Table | Rows | Content |
 |------|------|---------|
 |`users`|	15,000 | country, age, device, acquisition source, plan, signup / conversion / churn dates, promo flag, payment method and failed payments
-|`listening_activity`|	~215,000 | listening minutes, sessions, songs played, playlists created, skips
+|`listening_activity`|	215,324 | listening minutes, sessions, songs played, playlists created, skips
 |`ab_test_assignments`|	6,000	| Two A/B tests with variant and 4-week pre/post metrics. This project analyzes the push notifications test (3,000 users)
+| country_region | 10 | Google Sheets lookup table: maps each country to a region (Europe, North America, South America, Other). Used with XLOOKUP. |
 
-(COS TU NIE GRA)
-A separate lookup table `country_region` (10 rows) maps each country to a region (Europe, North America, South America, Other).
 
 Simplifications: payments and the conversion date are columns in `users` (no transaction table), there is a single Premium price ($9.99) and currency (USD), and each user converts at most once.
 
