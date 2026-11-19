@@ -1,7 +1,7 @@
 # Sonorax — User & Subscription Analytics
 
 **Author:** Ewelina Silina  
-**Project Type:** Data Analytics Portfolio Project 
+**Project Type:** Data Analytics Portfolio Project   
 **Tools:** PostgreSQL (SQL) · pgAdmin 4 ·  Google Sheets (pivot tables, XLOOKUP) · Looker Studio · GitHub  
 **Dataset:** Synthetic dataset generated with the assistance of AI: 15,000 users, about 215,000 monthly listening records and 6,000 A/B test assignments (January 2024 – September 2026), covering 10 country categories (7 European countries, USA, Brazil and "Other"). All data is fictional and created exclusively for analytical and portfolio purposes.
 
