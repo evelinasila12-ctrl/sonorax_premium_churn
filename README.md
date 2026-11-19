@@ -114,22 +114,22 @@ Full column descriptions: [DATA_DICTIONARY.md](DATA_DICTIONARY.md)
 
 | Tool | Purpose |
 |---|---|
-| **PostgreSQL + pgAdmin 4** | SQL querying, data manipulation, joins, aggregations, CTEs, and conditional expressions. |
-| **Google Sheets** | Data validation, pivot tables, and `XLOOKUP` for data enrichment. |
-| **Looker Studio** | Interactive 5-page dashboard with KPI scorecards and visualizations. |
-| **GitHub** | Project documentation, SQL code storage, and version control. |
-
-(COS NIE GRA W SQL)
+| **PostgreSQL + pgAdmin 4** | SQL querying: joins, aggregations (COUNT, SUM, AVG) and conditional expressions (CASE WHEN, FILTER). |
+| **Google Sheets** | Cross-checking SQL results, pivot tables, and `XLOOKUP` for data enrichment (adding a region to every user). |
+| **Looker Studio** | 5-page dashboard with KPI scorecards, charts, and written takeaways. |
+| **GitHub** | Project documentation and storage of SQL code and data. |
 
 ---
 
-# Analysis & Methodology (CALE ZMIENIC)
-Defined the business questions and the KPIs for each of them (see section 7).
-Loaded the data into PostgreSQL and wrote one SQL file per topic (churn, payments, conversion, engagement, A/B test).
-Cross-checked the results in Google Sheets. Pivot tables reproduce the key SQL numbers. A lookup table and `XLOOKUP` add the region to every user.
-Validated the numbers. Totals were reconciled between SQL, Sheets and the dashboard (for example, total lost revenue from failed payments is $23,305.72 in all three). This also caught a data-import problem: Google Sheets silently turned some decimals into dates, which was fixed by re-importing with automatic conversion switched off.
-Built the dashboard in Looker Studio: one page per topic, each with titled charts and plain-language labels.
-A/B test: compared the 7-day return rate of the control and test groups and wrote a short experiment readout (hypothesis, design, result, recommendation, limitations).
+# Analysis & Methodology 
+
+1. **Defined the business questions** and the KPIs for each of them (see Key Performance Indicators below).   
+2. **Loaded the data into PostgreSQL** and analyzed it with SQL, one file per query, grouped by topic: churn (`01`), payments (`02`), conversion (`03`), engagement (`04`) and the A/B test (`05`).   
+3. **Cross-checked the results in Google Sheets.** Pivot tables reproduce the key payment results from SQL: failed payment rate by payment method, churn with and without a failed payment, and lost revenue.   
+4. **Extended the analysis in Google Sheets.** A lookup table and `XLOOKUP` add the region to every user, and a pivot table compares churn with and without promotions by region.   
+5. **Validated the numbers.** Totals were reconciled between SQL, Sheets and the dashboard (for example, total lost revenue from failed payments is $23,305.72 in all three). This also caught a data-import problem: Google Sheets silently turned some decimals into dates, which was fixed by re-importing with automatic conversion switched off.   
+6. **Built a 5-page dashboard in Looker Studio:** Premium Churn (including listening activity), Conversion, Payments, A/B Test and Regional & Promo Insights. Each page has titled charts and KPI scorecards, and pages 3–5 include a written takeaway.   
+7. **Analyzed the A/B test:** compared the 7-day return rate of the control and test groups and wrote a short experiment readout (hypothesis, design, result, recommendation, limitations). No formal significance test was run.
 
 ---
 
