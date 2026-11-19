@@ -1,22 +1,23 @@
 # Sonorax — User & Subscription Analytics
 
 **Author:** Ewelina Silina  
-**Project Type:** SQL Data Analytics  
+**Project Type:** Data Analytics Portfolio Project 
 **Tools:** PostgreSQL (SQL) · pgAdmin 4 ·  Google Sheets (pivot tables, XLOOKUP) · Looker Studio · GitHub  
 **Dataset:** Synthetic dataset generated with the assistance of AI: 15,000 users, about 215,000 monthly listening records and 6,000 A/B test assignments (January 2024 – September 2026), covering 10 country categories (7 European countries, USA, Brazil and "Other"). All data is fictional and created exclusively for analytical and portfolio purposes.
 
 📊 **[View Dashboard](https://datastudio.google.com/reporting/b7bdd54a-6ee8-45be-aef0-8f65f45b12c4)**  
 📊 **[View Google Sheets Analysis](https://docs.google.com/spreadsheets/d/1i2JDQBkH-AwZcbQ26CAiCuM2XQDCLog0N-pFuiwgNQQ/edit?usp=sharing)**
+
 ---
 # Project Overview
 
 This project explores user behavior, subscription performance, payment activity, and engagement patterns in Sonorax, a fictional music streaming service.
 
-Using a synthetic dataset of 15,000 users, the analysis investigates customer churn, failed payments, subscription conversion, listening activity, and the effectiveness of user engagement strategies.
+Using a synthetic dataset of 15,000 users, the analysis investigates customer churn, failed payments, Free-to-Premium conversion, listening activity, and evaluates push notifications (A/B test) and promotions.
 
-The goal is to identify factors associated with Premium subscription cancellations, uncover potential revenue risks, and translate data-driven findings into actionable business recommendations.
+The goal is to identify factors associated with Premium subscription cancellations, uncover potential revenue risks, and translate  the findings into actionable business recommendations.
 
-The analysis was conducted using PostgreSQL (SQL), with results cross-checked in Google Sheets and presented through a 5-page Looker Studio dashboard.
+The analysis was conducted in PostgreSQL (SQL), cross-checked in Google Sheets, and presented in a 5-page Looker Studio dashboard.   
 
 Each analytical topic follows a structured approach:
 
@@ -25,22 +26,24 @@ Each analytical topic follows a structured approach:
 ---
 # Key Findings 
 
-- **Premium Churn:** 44.9% of Premium users have churned, representing approximately $39K in lost monthly recurring revenue (MRR).
+- **Premium Churn:** 44.9% of Premium users have churned (3,908 users), representing approximately $39K in lost monthly recurring revenue (MRR). Users who leave do so about 11.7 months after signing up, on average. 
 
-- **Payment Failures:** Users with failed payments have a higher churn rate (54.0%) compared to users without payment failures (41.5%). Direct Debit (48.1%) and PayPal (43.2%) fail most often, vs 19.0% for Card and 15.4% for Apple Pay.
+- **Payment Failures:** Premium users with failed payments churn more often (54.0%) than Premium users without them (41.5%). Direct Debit (48.1%) and PayPal (43.2%) have the highest share of users with a failed payment, vs 19.0% for Card and 15.4% for Apple Pay. The estimated revenue lost to failed payments is $23.3K.
 
-- **Conversion:** 41% of Free users upgraded to Premium (4,417 of 10,716), on average after 56.5 days. iOS users converted most often (44.2%).
+- **Conversion:** 41% of users who started on the Free plan upgraded to Premium (4,417 of 10,716), on average after 56.5 days. iOS users converted most often (44.2%).
   
-- **Listening Activity:** Listening time alone does not meaningfully distinguish users who churn from those who remain subscribed.
+- **Listening Activity:** Listening time alone does not meaningfully distinguish Premium users who churn from those who stay (550.6 vs 554.8 minutes per month, on average). Across all users, average monthly listening declined gradually from May 2024 to December 2025 (about 8%) and fell faster between January and September 2026 (about 28%).
 
-- **Push Notification Experiment:** The A/B test showed that push notifications increased the 7-day return rate from 50.8% to 72.8%, indicating a positive impact on short-term user engagement.
+- **Push Notification Experiment:** In the A/B test, the 7-day return rate was 72.8% with push notifications vs 50.8% without (about 1,500 users per group), suggesting a positive effect on short-term engagement. Statistical significance was not formally tested.
+
+- **Promotions:** Promotions are associated with lower churn in Europe (−2.1 percentage points), but not in other regions, where the difference is negligible or reversed. This is an observational comparison, not an experiment.
   
 ---
 
 # Business Problem
-Premium is the only paid plan in the dataset, so customer retention is directly tied to recurring revenue. Almost half of Premium subscribers (44.9%) have cancelled, and the reasons are unclear.
+Premium is the only paid plan in the dataset, so customer retention is directly tied to recurring revenue. 44.9% of Premium subscribers have cancelled, and the reasons are unclear.
 
-The business needs to understand what is associated with cancellations. Do users listen less before they leave? Do failed payments contribute to subscription loss? Which Free users convert to Premium, how fast, and what influences it? Are push notifications and promotions associated with better engagement and retention?
+The business needs to understand what is associated with cancellations. Do users listen less before they leave? Do failed payments contribute to subscription loss? Which Free users convert to Premium, how fast, and what influences it? Do push notifications bring users back to the app, and are promotions associated with lower churn?
 
 Without evidence, retention budget is spent on assumptions. This project shows where users are lost and which factors are associated with churn, and turns the findings into data-driven recommendations to protect recurring revenue.
 
@@ -65,7 +68,7 @@ Without evidence, retention budget is spent on assumptions. This project shows w
 
 - What percentage of Free users convert to Premium?   
 - How long does it take users to upgrade to Premium?   
-- How do device type, acquisition channel, and promotional campaigns relate to conversion rates?
+- How do device type, acquisition channel, and use of promotions relate to conversion rates?
   
 **4. Engagement:**
 
@@ -78,9 +81,8 @@ Without evidence, retention budget is spent on assumptions. This project shows w
 
 **6. Promotions:**
 
-- Are who used a promotion less likely to churn?    
-- Does the relationship between promotional campaigns and churn vary across regions?
-
+- Are users who used a promotion less likely to churn?    
+- Does the relationship between promotion use and churn vary across regions?
 ---
 
 # Dataset Description
