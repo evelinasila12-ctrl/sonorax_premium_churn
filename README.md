@@ -138,14 +138,15 @@ Full column descriptions: [DATA_DICTIONARY.md](DATA_DICTIONARY.md)
 | KPI | Definition | Business Purpose |
 | --- | --- | --- |
 | Churn Rate | Percentage of users with `subscription_status = 'churned'` within a given group. | Measures subscriber loss. |
-| Time to Churn | Difference between `churn_date` and `signup_date`. | Identifies when users leave in their lifecycle. |
-| Lost Monthly Revenue (Churn) | Number of churned Premium users × monthly subscription price ($9.99). | Estimates monthly recurring revenue lost due to cancellations. |
-| Failed Payment Rate | Percentage of users with at least one failed payment, grouped by payment method. | Identifies payment methods with higher failure rates. |
-| Estimated Revenue at Risk (Payments) | Estimated revenue exposure based on failed payment counts and subscription price. | Assesses the potential financial impact of payment failures. |
+| Time to Churn | Difference between `churn_date` and `signup_date` (measured from signup, not from the upgrade to Premium). | Identifies when users leave in their lifecycle. |
+| Lost Monthly Revenue (Churn) | Number of churned Premium users × monthly subscription price ($9.99). Covers one month, not customer lifetime value. | Estimates monthly recurring revenue lost due to cancellations. |
+| Failed Payment Rate | Percentage of Premium users with at least one failed payment, grouped by payment method. | Identifies payment methods with higher failure rates. |
+| Estimated Lost Revenue (Payments) | Failed payments × monthly price × recovery factor (0.6–1.0, reflecting that part of the failed payments is retried successfully). | Assesses the estimated financial impact of payment failures. |
 | Conversion Rate | Percentage of users who started on the Free plan and upgraded to Premium. | Measures Free-to-Premium conversion performance. |
 | Time to Convert | Difference between `plan_change_date` and `signup_date`. | Measures how long users take to upgrade. |
+| Average Monthly Listening | Average `listening_minutes` per user per month (also `playlists_created`). | Compares engagement between groups and over time. |
 | 7-Day Return Rate | Percentage of test users who returned to the app within 7 days (`returned_7d`). | Measures short-term user engagement in the A/B test. |
-| Promotional Churn Difference (pp) | Difference in churn rates between users with and without promotions, expressed in percentage points. | Evaluates the relationship between promotions and churn. |
+| Promotional Churn Difference (pp) | Churn rate of users who used a promotion minus churn rate of users who did not, in percentage points, by region. | Evaluates the relationship between promotions and churn (observational). |
 
 ---
 
