@@ -154,16 +154,16 @@ Full column descriptions: [DATA_DICTIONARY.md](DATA_DICTIONARY.md)
 
 ### 1. Premium Churn and Revenue Impact
 
-- **44.91% of Premium users churned** (3,908 users), compared to 30.07% of Free users.
-- Premium cancellations represent an estimated **$39,041 in lost monthly recurring revenue (MRR)**.
-- Users remained subscribed for an average of 11.7 months before churning, with subscription durations ranging from 37 to 934 days.
+- **44.91% of Premium users churned** (3,908 users), compared with 30.07% of Free users who left the service.
+- Premium cancellations represent an estimated **$39,041 in lost monthly recurring revenue (MRR)**: 3,908 users × $9.99.
+- On average, Premium users cancelled **11.7 months after signing up**; the range was 37 to 934 days.
 
 ### 2. Payment Failures and Churn
 
-- Premium users with at least one failed payment had a **54.0% churn rate**, compared to 41.5% among users without failed payments.
-- Payment failure rates varied significantly across payment methods:
+- Premium users with at least one failed payment had a **54.0% churn rate**, compared with 41.5% among Premium users without a failed payment.
+- The share of users with a failed payment varied significantly across payment methods:
 
-| Payment Method | Failure Rate | Share of Estimated Lost Revenue |
+| Payment Method | Users with a Failed Payment | Share of Estimated Lost Revenue |
 | --- | ---: | ---: |
 | Direct Debit | 48.1% | 9.5% |
 | PayPal | 43.2% | 43.3% |
@@ -171,20 +171,20 @@ Full column descriptions: [DATA_DICTIONARY.md](DATA_DICTIONARY.md)
 | Card | 19.0% | 26.9% |
 | Apple Pay | 15.4% | 5.5% |
 
-- Estimated revenue at risk from payment failures amounts to **$23,305.72**.
-- PayPal accounts for the largest share of estimated revenue at risk, while Direct Debit has the highest payment failure rate.
+- Estimated revenue lost to failed payments amounts to **$23,305.72**.
+- Direct Debit has the highest failure rate, but PayPal accounts for the largest share of lost revenue because it has far more users (2,239 vs. 399).
 
 ### 3. User Engagement and Listening Activity
 
 - Average monthly listening time was nearly identical for churned and active Premium users: **550.6 vs. 554.8 minutes**.
-- Playlist creation was also similar: **0.74 vs. 0.78 playlists per user**.
-- Listening activity remained relatively stable through 2025, then declined by approximately 28% between January and September 2026.
+- Playlist creation was also similar: **0.74 vs. 0.78 playlists per user per month**.
+- Across all users, average monthly listening stayed relatively stable through 2025, then declined by approximately 28% between January and September 2026 (from 566 to 410 minutes).
 
 **Insight:** Listening time and playlist creation alone do not meaningfully distinguish churned users from active subscribers.
 
 ### 4. Free-to-Premium Conversion
 
-- **41.2% of Free users converted to Premium** (4,417 out of 10,716 users).
+- **41.2% of users who started on the Free plan converted to Premium** (4,417 of 10,716).
 - Average time to conversion was 56.5 days.
 - Conversion rates varied by device:
 
@@ -195,42 +195,41 @@ Full column descriptions: [DATA_DICTIONARY.md](DATA_DICTIONARY.md)
 | Desktop | 37.6% |
 | Web | 37.5% |
 
-- Users associated with promotional offers had a higher conversion rate (64.3%) than users without promotions (28.7%). However, this is an observed association, not evidence of a causal effect.
+- Users who used a promotion converted at 64.3%, compared with 28.7% for users who did not. This is an observed association, not evidence of a causal effect: the promotion flag is recorded at user level, so it is unknown whether the promotion came before the conversion.
 
-### 5. Push Notifications – A/B Test
+### 5. Push Notifications: A/B Test
 
-- The notification group achieved a **72.77% 7-day return rate**, compared to 50.84% in the control group.
-- This represents an increase of **21.93 percentage points**.
+- The notification group had a **72.77% 7-day return rate**, compared with 50.84% in the control group.
+- This is a difference of **21.93 percentage points**.
 - The test included 3,000 users: 1,513 in the notification group and 1,487 in the control group.
 
-**Insight:** The experiment showed a positive difference in short-term user engagement following push notifications.
+**Insight:** The experiment showed a positive difference in short-term engagement following push notifications. Statistical significance was not formally tested.
 
-### 6. Promotional Campaigns and Regional Churn
+### 6. Promotions and Regional Churn
 
-Churn rate differences between users with and without promotions varied across regions:
+Churn rate with a promotion minus churn rate without one, by region (all users, Free and Premium):
 
 | Region | Churn Rate Difference |
 | --- | ---: |
-| Europe | -2.06 pp |
-| North America | -0.31 pp |
+| Europe | −2.06 pp |
+| North America | −0.31 pp |
 | South America | +0.38 pp |
 | Other | +0.84 pp |
 
-- Europe showed the largest negative difference in churn rates among users associated with promotions.
-- Other regions showed smaller differences, with slightly higher churn among users associated with promotions.
+- Europe is the only region with a clear difference: churn was 37.33% among users who used a promotion and 39.40% among those who did not.
+- In North America the difference is negligible. In South America and Other, churn was slightly higher among users who used a promotion.
 
-**Insight:** The relationship between promotions and churn varies by region. These observational results do not establish a causal promotional effect.
-
+**Insight:** The relationship between promotions and churn varies by region. These observational results do not establish a causal promotional effec
 
 ---
 
 # Business Recommendations
 
 ### 1. Reduce Payment-Related Churn
-Prioritize payment recovery by introducing automated payment retries, reminder notifications, and fallback payment methods. Start with PayPal, which accounts for the largest share of estimated revenue at risk, and Direct Debit, which has the highest failure rate. Contact users promptly after a failed payment, as this group shows a higher churn rate (54.0%).
+Prioritize payment recovery with automated payment retries, reminder notifications, and fallback payment methods. Start with PayPal, which accounts for the largest share of estimated lost revenue, and Direct Debit, which has the highest failure rate. Contact users promptly after a failed payment, as these users churn more often.
 
 ### 2. Strengthen First-Year Retention
-Focus retention efforts on the first year of the subscription lifecycle, as users churn after an average of 11.7 months. Introduce targeted engagement campaigns and monitor early signs of disengagement to identify subscribers at risk of cancelling.
+Focus retention efforts on the first year after signup, as Premium users who cancel do so about 11.7 months after signing up on average. Introduce onboarding and retention campaigns during this period, and monitor payment problems and changes in activity to identify subscribers at risk.
 
 ### 3. Validate and Expand Push Notifications
 Consider rolling out push notifications more broadly, following a statistical significance test to confirm that the observed increase in the 7-day return rate is reliable. If validated, use targeted notifications to encourage users to return to the platform.
@@ -239,14 +238,41 @@ Consider rolling out push notifications more broadly, following a statistical si
 Do not rely on listening time alone as an early-warning indicator. Combine payment-related signals with changes in individual user activity over time to identify potential churn more effectively.
 
 ### 5. Optimize Promotional Campaigns
-Evaluate promotional campaigns through controlled experiments before reallocating marketing budgets. Pay particular attention to Europe, where the largest difference in churn rates between users with and without promotions was observed.
+Evaluate promotions through controlled experiments before reallocating marketing budgets. Start with Europe, where users who used a promotion churned less (an observed difference, not a proven effect).
 
 ### 6. Prioritize Mobile Conversion
-Focus conversion optimization efforts on mobile users, particularly iOS, which has the highest Free-to-Premium conversion rate (44.2%), followed by Android (40.6%). Investigate which aspects of the mobile experience may support stronger conversion performance.
+Prioritize mobile users (iOS and Android) in conversion campaigns, as they convert best. Investigate why Web and Desktop users convert less often.
 
 ---
 
-# Dashboard Preview (OPISAC WAZNE RZECZY Z DASHBOARD)
+# Dashboard Preview 
+
+The dashboard has 5 pages, one per topic. Pages 3–5 include a written takeaway.
+
+### Page 1: Premium Churn
+![Premium Churn dashboard](images/dashboard_01_premium_churn.png)
+
+Churn rate of Premium vs Free users, lost monthly revenue, time to churn, listening activity and playlist creation of active vs churned users, and the monthly listening trend.
+
+### Page 2: Conversion
+![Conversion dashboard](images/dashboard_02_conversion.png)
+
+Free-to-Premium conversion overview, time to convert, conversion by device, share of converted users by acquisition source, and conversion with and without a promotion.
+
+### Page 3: Payments
+![Payments dashboard](images/dashboard_03_payments.png)
+
+Failed payment rate and share of estimated lost revenue by payment method, and churn for users with and without a failed payment.
+
+### Page 4: A/B Test, Push Notifications
+![A/B test dashboard](images/dashboard_04_ab_test.png)
+
+7-day return rate of the control and test groups, group sizes, and the experiment summary (hypothesis, design, result, recommendation, limitations).
+
+### Page 5: Regional & Promo Insights
+![Regional and promo insights dashboard](images/dashboard_05_regional_promo_insights.png)
+
+Churn with and without a promotion by region, the difference in percentage points, and the country-to-region lookup table built with `XLOOKUP`.
 
 ---
 
