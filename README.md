@@ -276,12 +276,16 @@ Churn with and without a promotion by region, the difference in percentage point
 
 ---
 
+# Google Sheets Analysis
+
+---
+
 # Repository Structure 
 
 ```
 sonorax_premium_churn/
 ├── README.md
-├── data_dictionary.md                 # column descriptions
+├── DATA_DICTIONARY.md                 # column descriptions
 ├── users.csv                          # full data (large, no preview on GitHub)
 ├── listening_activity.csv
 ├── ab_test_assignments.csv
