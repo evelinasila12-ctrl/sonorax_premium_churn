@@ -114,7 +114,7 @@ Full column descriptions: [DATA_DICTIONARY.md](DATA_DICTIONARY.md)
 
 | Tool | Purpose |
 |---|---|
-| **PostgreSQL + pgAdmin 4** | SQL querying: joins, aggregations (COUNT, SUM, AVG) and conditional expressions (CASE WHEN, FILTER). |
+| **PostgreSQL + pgAdmin 4** | SQL querying with joins, aggregations and conditional logic. |
 | **Google Sheets** | Cross-checking SQL results, pivot tables, and `XLOOKUP` for data enrichment (adding a region to every user). |
 | **Looker Studio** | 5-page dashboard with KPI scorecards, charts, and written takeaways. |
 | **GitHub** | Project documentation and storage of SQL code and data. |
@@ -278,6 +278,36 @@ Churn with and without a promotion by region, the difference in percentage point
 
 # Google Sheets Analysis
 
+The payment results from SQL were cross-checked with pivot tables in Google Sheets, and the analysis was extended with `XLOOKUP`.
+
+**[View the Google Sheets analysis](https://docs.google.com/spreadsheets/d/1i2JDQBkH-AwZcbQ26CAiCuM2XQDCLog0N-pFuiwgNQQ/edit?usp=sharing)**
+
+### Failed payment rate by payment method
+![Payment methods pivot table](images/sheets_01_payment_methods.png)
+
+Number of users, average failed payments and share of users with a failed payment, by payment method. The results match the SQL query (for example Direct Debit 48.1%, PayPal 43.2%).
+
+### Churn with and without a failed payment
+![Failed payment and churn pivot table](images/sheets_02_failed_payment_churn.png)
+
+Churn rate of Premium users with a failed payment (54.0%) vs without (41.5%), the same as in SQL.
+
+### Estimated lost revenue by payment method
+![Estimated lost revenue pivot table](images/sheets_03_revenue_lost.png)
+
+Estimated revenue lost to failed payments by payment method. The total of $23,305.72 is identical in SQL, Sheets and the dashboard.
+
+### Adding a region with XLOOKUP
+![XLOOKUP region column](images/sheets_04_xlookup_region.png)
+
+The region of each user is added from the `country_region` lookup table with `=XLOOKUP(country, country_region!A:A, country_region!B:B)`.
+
+### Churn with and without a promotion, by region
+![Promotion and region pivot table](images/sheets_05_promo_region_churn.png)
+
+Pivot table of churn rate by region and promotion use, with the difference in percentage points. These results feed page 5 of the dashboard (observational, not an experiment).
+
+---
 ---
 
 # Repository Structure 
