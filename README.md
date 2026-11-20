@@ -219,7 +219,7 @@ Churn rate with a promotion minus churn rate without one, by region (all users, 
 - Europe is the only region with a clear difference: churn was 37.33% among users who used a promotion and 39.40% among those who did not.
 - In North America the difference is negligible. In South America and Other, churn was slightly higher among users who used a promotion.
 
-**Insight:** The relationship between promotions and churn varies by region. These observational results do not establish a causal promotional effec
+**Insight:** The relationship between promotions and churn varies by region. These observational results do not establish a causal promotional effect.
 
 ---
 
