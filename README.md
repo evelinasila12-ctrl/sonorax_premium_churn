@@ -314,17 +314,18 @@ Pivot table of churn rate by region and promotion use, with the difference in pe
 ```
 sonorax_premium_churn/
 ├── README.md
-├── DATA_DICTIONARY.md                 # column descriptions
-├── users.csv                          # full data (large, no preview on GitHub)
-├── listening_activity.csv
-├── ab_test_assignments.csv
-├── users_sample.csv                   # first 100 rows, for quick preview
-├── listening_activity_sample.csv
-├── sql/
-│   ├── 01_premium_churn.sql           # churn rate, time to churn, lost revenue
-│   ├── 02_payments.sql                # failed payments and their impact
-│   ├── 03_conversion.sql              # Free -> Premium conversion
-│   ├── 04_engagement_decline.sql      # listening activity and trend
+├── DATA_DICTIONARY.md                 # column descriptions and data notes
+├── data/
+│   ├── ab_test_assignments.csv
+│   ├── listening_activity.csv
+│   ├── listening_activity_sample.csv
+│   ├── users.csv                      # full data (large, no preview on GitHub)
+│   └── users_sample.csv               # sample, for quick preview
+├── sql/                               # one file per query, numbered by topic
+│   ├── 01.01–01.05_premium_churn.sql  # churn rate, engagement before churn, time to churn, lost revenue
+│   ├── 02.01–02.03_payments.sql       # failed payments and their impact
+│   ├── 03.01–03.05_conversion.sql     # Free -> Premium conversion
+│   ├── 04.01–04.04_active.sql         # listening activity and engagement
 │   └── 05_ab_test_notifications.sql   # A/B test of push notifications
-└── dashboard/                         # dashboard screenshots
+└── images/                            # dashboard and Google Sheets screenshots
 ```
