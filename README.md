@@ -308,7 +308,6 @@ The region of each user is added from the `country_region` lookup table with `=X
 Pivot table of churn rate by region and promotion use, with the difference in percentage points. These results feed page 5 of the dashboard (observational, not an experiment).
 
 ---
----
 
 # Repository Structure 
 
