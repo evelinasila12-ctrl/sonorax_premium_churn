@@ -309,6 +309,29 @@ Pivot table of churn rate by region and promotion use, with the difference in pe
 
 ---
 
+# Limitations & Future Improvements
+
+**Limitations**
+
+- **Synthetic data.** The dataset was generated with AI assistance and contains relationships built in on purpose, so the project shows the analytical workflow, not real customer behavior.
+- **A/B test.** No formal statistical significance test was run. The conclusion rests on the size of the difference (21.93 percentage points) and the sample (about 1,500 users per group).
+- **Promotions** (conversion and churn by region) are associations, not proof of cause and effect. The promotion flag is recorded at user level, without a date.
+- **Payments.** Payment data is stored as columns in `users`, without transaction history, so lost revenue from failed payments is an estimate.
+- **Churn revenue** covers one month of lost subscription fees, not customer lifetime value.
+- **Single price and currency.** There are no plan tiers (Individual, Duo, Family).
+- **Churn analysis** covers the whole period, without cohorts. Time to churn is measured from signup.
+- **Dashboard.** The dashboard is static and has no filters.
+- Further data notes, for example on independently generated date columns, are in [DATA_DICTIONARY.md](DATA_DICTIONARY.md).
+
+**Future improvements**
+
+- Run a formal significance test for the A/B test (two-proportion z-test) and report a confidence interval.
+- Add cohort analysis and measure the change in each user's engagement (first vs last months of activity).
+- Build an interactive dashboard with filters (plan, region, device) on the full `users` table.
+- Repeat the analysis on a real public dataset.
+
+---
+
 # Repository Structure 
 
 ```
