@@ -30,7 +30,7 @@ Each analytical topic follows a structured approach:
 
 - **Payment Failures:** Premium users with failed payments churn more often (54.0%) than Premium users without them (41.5%). Direct Debit (48.1%) and PayPal (43.2%) have the highest share of users with a failed payment, vs 19.0% for Card and 15.4% for Apple Pay. The estimated revenue lost to failed payments is $23.3K.
 
-- **Conversion:** 41% of users who started on the Free plan upgraded to Premium (4,417 of 10,716), on average after 56.5 days. iOS users converted most often (44.2%).
+- **Conversion:** 41.2% of users who started on the Free plan upgraded to Premium (4,417 of 10,716), on average after 56.5 days. iOS users converted most often (44.2%).
   
 - **Listening Activity:** Listening time alone does not meaningfully distinguish Premium users who churn from those who stay (550.6 vs 554.8 minutes per month, on average). Across all users, average monthly listening declined gradually from May 2024 to December 2025 (about 8%) and fell faster between January and September 2026 (about 28%).
 
