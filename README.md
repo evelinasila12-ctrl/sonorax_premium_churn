@@ -178,7 +178,7 @@ Full column descriptions: [DATA_DICTIONARY.md](DATA_DICTIONARY.md)
 
 - Average monthly listening time was nearly identical for churned and active Premium users: **550.6 vs. 554.8 minutes**.
 - Playlist creation was also similar: **0.74 vs. 0.78 playlists per user per month**.
-- Across all users, average monthly listening stayed relatively stable through 2025, then declined by approximately 28% between January and September 2026 (from 566 to 410 minutes).
+- Across all users, average monthly listening declined gradually through 2025 (about 8% from May 2024 to December 2025, from 617 to 570 minutes), then fell faster, by approximately 28%, between January and September 2026 (from 566 to 410 minutes).
 
 **Insight:** Listening time and playlist creation alone do not meaningfully distinguish churned users from active subscribers.
 
