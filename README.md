@@ -13,11 +13,11 @@
 
 This project explores user behavior, subscription performance, payment activity, and engagement patterns in Sonorax, a fictional music streaming service.
 
-Using a synthetic dataset of 15,000 users, the analysis investigates customer churn, failed payments, Free-to-Premium conversion, listening activity, and evaluates push notifications (A/B test) and promotions.
+Using a synthetic dataset of 15,000 users, the analysis investigates customer churn, failed payments, Free-to-Premium conversion and listening activity, and evaluates push notifications (A/B test) and promotions.
 
-The goal is to identify factors associated with Premium subscription cancellations, uncover potential revenue risks, and translate  the findings into actionable business recommendations.
+The goal is to identify factors associated with Premium subscription cancellations, uncover potential revenue risks, and translate the findings into actionable business recommendations.
 
-The analysis was conducted in PostgreSQL (SQL), cross-checked in Google Sheets, and presented in a 5-page Looker Studio dashboard.   
+The analysis was conducted in PostgreSQL (SQL), cross-checked in Google Sheets, and presented in a 5-page Looker Studio dashboard.
 
 Each analytical topic follows a structured approach:
 
@@ -272,7 +272,7 @@ Failed payment rate and share of estimated lost revenue by payment method, and c
 ### Page 5: Regional & Promo Insights
 ![Regional and promo insights dashboard](images/dashboard_05_regional_promo_insights.png)
 
-Churn with and without a promotion by region, the difference in percentage points, and the country-to-region lookup table built with `XLOOKUP`.
+Churn with and without a promotion by region, the difference in percentage points, and the country-to-region lookup table used with `XLOOKUP`.
 
 ---
 
